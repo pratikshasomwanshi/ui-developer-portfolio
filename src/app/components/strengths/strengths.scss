@@ -1,0 +1,119 @@
+.strengths {
+  background: #000;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* ==========================
+   Section Tag
+========================== */
+
+.section-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+
+  margin-bottom: 32px;
+}
+
+.section-tag::before {
+  content: '';
+
+  width: 55px;
+  height: 4px;
+
+  background: #f7c52b;
+
+  display: inline-block;
+}
+
+/* ==========================
+   Section Title
+========================== */
+
+.section-title {
+  color: #fff;
+
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 500;
+
+  margin: 0 0 60px;
+}
+
+/* ==========================
+   Slider
+========================== */
+
+.strength-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.strength-track {
+  display: flex;
+  width: 100%;
+
+  /*
+   * 0.8 second smooth slide
+   */
+  transition: transform 0.8s ease-in-out;
+
+  will-change: transform;
+}
+
+/* ==========================
+   Each Page
+========================== */
+
+.strength-page {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 32px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 1200px) {
+  .strength-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .strengths {
+    padding: 70px 20px;
+  }
+
+  .section-tag {
+    font-size: 16px;
+  }
+
+  .section-tag::before {
+    width: 45px;
+    height: 3px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .strength-page {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

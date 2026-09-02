@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <span class="section-tag"> PROJECTS </span>
+
+      <h2 class="projects-title">Selected Work</h2>
+
+      <p class="projects-description">Real-World Products Shipped. Full Case Studies On Behance.</p>
+    </div>
+
+    @for (project of projects; track project.title) {
+      <app-project-card [project]="project"> </app-project-card>
+    }
+  </div>
+</section>

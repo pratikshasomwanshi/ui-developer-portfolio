@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './experience.html',
   styleUrl: './experience.scss',
 })
-export class Experience {}
+export class ExperienceComponent {}

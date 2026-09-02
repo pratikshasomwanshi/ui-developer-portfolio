@@ -1,0 +1,151 @@
+.contact {
+  background: #000;
+  padding: 90px 0;
+}
+
+.contact-top {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LEFT CONTENT */
+.left h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 32px;
+}
+
+.left p {
+  max-width: 620px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #c9c9c9;
+  margin: 0;
+}
+
+/* RIGHT BUTTONS */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+.right a {
+  width: 190px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #1a1a1a;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.right a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: #222;
+}
+
+.right img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* TABLET */
+@media (max-width: 1400px) {
+  .contact-top {
+    grid-template-columns: 40% 60%;
+    gap: 30px;
+  }
+
+  .right {
+    gap: 12px;
+  }
+
+  .right a {
+    width: 175px;
+    font-size: 16px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+  .contact-top {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 20px;
+  }
+
+  .left h2 {
+    font-size: 48px;
+  }
+
+  .left p {
+    font-size: 18px;
+  }
+
+  .right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .right a {
+    width: 100%;
+    height: 54px;
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .right {
+    grid-template-columns: 1fr;
+  }
+
+  .right a {
+    width: 100%;
+  }
+}

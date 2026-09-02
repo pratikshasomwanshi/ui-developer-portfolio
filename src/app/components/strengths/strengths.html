@@ -1,1 +1,19 @@
-<p>strengths works!</p>
+<section class="strengths">
+  <div class="container">
+    <span class="section-tag">STRENGTHS</span>
+
+    <h2 class="section-title">What I Bring</h2>
+
+    <div class="strength-slider">
+      <div class="strength-track" [style.transform]="'translateX(-' + currentPage * 100 + '%)'">
+        @for (page of pages; track $index) {
+          <div class="strength-page">
+            @for (item of page; track item.title) {
+              <app-strength-card [strength]="item"> </app-strength-card>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

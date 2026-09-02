@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './project-card.html',
   styleUrl: './project-card.scss',
 })
-export class ProjectCard {}
+export class ProjectCardComponent {
+  @Input() project!: any;
+  isHover = false;
+  isLiveHover = false;
+
+  openLink(): void {
+    window.open(this.project.link, '_blank');
+  }
+}

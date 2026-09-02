@@ -1,1 +1,70 @@
-<p>project-card works!</p>
+<div class="project-card">
+  <div class="project-content">
+    <div class="project-title">
+      <h3 [style.color]="project.titleColor">
+        {{ project.title }}
+      </h3>
+
+      <img [src]="project.icon" [alt]="project.title" />
+    </div>
+
+    <p class="project-description">
+      {{ project.description1 }}
+    </p>
+
+    <p class="project-description">
+      {{ project.description2 }}
+    </p>
+
+    <div class="project-tags">
+      @for (tag of project.tags; track tag) {
+        <span>{{ tag }}</span>
+      }
+    </div>
+
+    <!-- Buttons -->
+    <div class="project-buttons">
+      <!-- Case Study Button -->
+      @if (project.link) {
+        <button
+          class="case-study-btn"
+          (mouseenter)="isHover = true"
+          (mouseleave)="isHover = false"
+          (click)="openLink()"
+        >
+          <span class="btn-text"> Click View Full Case Study </span>
+
+          <span class="btn-icon">
+            {{ isHover ? '→' : '↗' }}
+          </span>
+        </button>
+      }
+
+      <!-- Live Website Button -->
+      @if (project.liveUrl) {
+        <a
+          class="live-website-btn"
+          [href]="project.liveUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          (mouseenter)="isLiveHover = true"
+          (mouseleave)="isLiveHover = false"
+        >
+          <span class="btn-text"> Live Website </span>
+
+          <span class="btn-icon">
+            {{ isLiveHover ? '→' : '↗' }}
+          </span>
+        </a>
+      }
+    </div>
+  </div>
+
+  <div class="project-image">
+    <p class="project-type">
+      {{ project.type }}
+    </p>
+
+    <img [src]="project.image" [alt]="project.title" />
+  </div>
+</div>

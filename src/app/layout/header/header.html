@@ -1,1 +1,30 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container header-wrapper">
+    <!-- Logo -->
+
+    <div class="logo">
+      <a class="logo" routerLink="/">
+        <img src="/logo.png" alt="KS Logo" />
+        <!-- <span>KS</span> -->
+      </a>
+    </div>
+
+    <!-- Menu -->
+
+    <nav>
+      @for (item of menuItems; track item.id) {
+        <a (click)="scrollTo(item.id)">
+          {{ item.title }}
+        </a>
+      }
+    </nav>
+
+    <!-- Right Side -->
+
+    <div class="right-section">
+      <span class="email"> kshitij.somwanshi2001@gmail.com </span>
+
+      <button (click)="scrollTo('contact')">HIRE ME</button>
+    </div>
+  </div>
+</header>
