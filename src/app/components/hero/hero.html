@@ -1,6 +1,6 @@
 <section id="home" class="hero">
   <div class="container hero-wrapper">
-    <!-- Left -->
+    <!-- LEFT -->
     <div class="hero-left">
       <div class="hero-tag">Portfolio</div>
 
@@ -16,7 +16,7 @@
         healthcare dashboards to mobile apps— design that converts users into believers.
       </p>
 
-      <!-- Next step -->
+      <!-- SOCIAL ICONS -->
       <div class="social-icons">
         <a
           href="https://www.instagram.com/YOUR_USERNAME"
@@ -46,14 +46,18 @@
         </a>
       </div>
 
-      <!-- Next step -->
+      <!-- BUTTONS -->
       <div class="hero-buttons">
-        <button class="btn-primary">View Portfolio</button>
+        <button class="btn-primary" type="button" (click)="scrollTo('projects')">
+          View Portfolio
+        </button>
 
-        <button class="btn-secondary">Contact Me</button>
+        <button class="btn-secondary" type="button" (click)="scrollTo('contact')">
+          Contact Me
+        </button>
       </div>
 
-      <!-- Next step -->
+      <!-- STATS -->
       <div class="hero-stats">
         <div class="stat-card">
           <h2>3</h2>
@@ -72,12 +76,14 @@
       </div>
     </div>
 
-    <!-- Right -->
+    <!-- RIGHT -->
     <div class="hero-right">
-      <img src="images/profile.png" />
+      <img src="images/profile.png" alt="Kshitij Somwanshi" />
     </div>
   </div>
 </section>
+
+<!-- SKILLS BAR -->
 
 <div class="skills-bar">
   <div class="skills-track">

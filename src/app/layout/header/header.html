@@ -1,17 +1,14 @@
 <header class="header">
   <div class="container header-wrapper">
     <!-- Logo -->
-
     <div class="logo">
-      <a class="logo" routerLink="/">
+      <a routerLink="/">
         <img src="/logo.png" alt="KS Logo" />
-        <!-- <span>KS</span> -->
       </a>
     </div>
 
-    <!-- Menu -->
-
-    <nav>
+    <!-- Desktop / Tablet Menu -->
+    <nav class="desktop-nav">
       @for (item of menuItems; track item.id) {
         <a (click)="scrollTo(item.id)">
           {{ item.title }}
@@ -19,12 +16,37 @@
       }
     </nav>
 
-    <!-- Right Side -->
-
-    <div class="right-section">
+    <!-- Desktop / Tablet Right Side -->
+    <div class="right-section desktop-right">
       <span class="email"> kshitij.somwanshi2001@gmail.com </span>
 
-      <button (click)="scrollTo('contact')">HIRE ME</button>
+      <button type="button" (click)="scrollTo('contact')">HIRE ME</button>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+
+  <!-- Mobile Menu -->
+  @if (isMenuOpen) {
+    <div class="mobile-menu">
+      @for (item of menuItems; track item.id) {
+        <a (click)="scrollTo(item.id)">
+          {{ item.title }}
+        </a>
+      }
+
+      <button type="button" (click)="scrollTo('contact')">HIRE ME</button>
+    </div>
+  }
 </header>

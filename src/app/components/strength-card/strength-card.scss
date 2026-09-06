@@ -1,74 +1,108 @@
+/* ==========================
+   STRENGTH CARD
+========================== */
+
 .strength-card {
   width: 100%;
-  height: 230px;
+  min-height: 220px;
 
-  padding: 24px;
+  padding: 28px 24px;
 
-  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
-  background: linear-gradient(135deg, rgba(255, 120, 0, 0.12), rgba(120, 0, 255, 0.08));
+  background: #111;
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
 
-  backdrop-filter: blur(16px);
+  box-sizing: border-box;
 
-  transition: all 0.35s ease;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .strength-card:hover {
-  transform: translateY(-8px);
-  border-color: #f7c52b;
-  box-shadow: 0 20px 40px rgba(247, 197, 43, 0.15);
+  transform: translateY(-4px);
+
+  border-color: rgba(247, 197, 43, 0.5);
 }
 
-.icon-box {
-  width: 64px;
-  height: 64px;
+/* ==========================
+   ICON
+========================== */
 
-  background: #fff;
-  border-radius: 12px;
+.icon-box {
+  width: 56px;
+  height: 56px;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background: #1b1b1b;
 }
 
 .icon-box img {
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
+
   object-fit: contain;
 }
 
+/* ==========================
+   TITLE
+========================== */
+
 .strength-card h3 {
-  margin: 0 0 14px;
+  margin: 0;
 
   color: #fff;
 
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.3;
+  font-family: 'Space Grotesk', sans-serif;
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 21px;
+  font-weight: 600;
+
+  line-height: 1.3;
 }
+
+/* ==========================
+   LEVEL
+========================== */
 
 .strength-card p {
-  margin: 0 0 18px;
+  margin: 8px 0 0;
 
-  color: #ddd;
+  color: #aaa;
 
-  font-size: 16px;
-  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
 }
+
+/* ==========================
+   PROGRESS
+========================== */
 
 .progress {
   width: 100%;
-  height: 5px;
+  height: 6px;
 
-  background: rgba(255, 255, 255, 0.2);
+  margin-top: 18px;
+
+  background: #292929;
 
   border-radius: 999px;
 
@@ -81,4 +115,152 @@
   background: #f7c52b;
 
   border-radius: inherit;
+
+  transition: width 0.6s ease;
+}
+
+/* ==================================================
+   LARGE DESKTOP
+   1200px+
+================================================== */
+
+@media (min-width: 1200px) {
+  .strength-card {
+    min-height: 220px;
+
+    padding: 28px 24px;
+  }
+
+  .icon-box {
+    width: 58px;
+    height: 58px;
+  }
+
+  .icon-box img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .strength-card h3 {
+    font-size: 21px;
+  }
+}
+
+/* ==================================================
+   TABLET
+   769px - 1199px
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .strength-card {
+    min-height: 200px;
+
+    padding: 24px 20px;
+  }
+
+  .icon-box {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 16px;
+  }
+
+  .icon-box img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .strength-card h3 {
+    font-size: 18px;
+  }
+
+  .strength-card p {
+    font-size: 13px;
+  }
+
+  .progress {
+    margin-top: 15px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+   0px - 768px
+================================================== */
+
+@media (max-width: 768px) {
+  .strength-card {
+    min-height: 180px;
+
+    padding: 20px 18px;
+
+    border-radius: 12px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 14px;
+  }
+
+  .icon-box img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .strength-card h3 {
+    font-size: 17px;
+
+    line-height: 1.3;
+  }
+
+  .strength-card p {
+    font-size: 13px;
+
+    margin-top: 6px;
+  }
+
+  .progress {
+    height: 5px;
+
+    margin-top: 14px;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+   0px - 480px
+================================================== */
+
+@media (max-width: 480px) {
+  .strength-card {
+    min-height: 165px;
+
+    padding: 18px 16px;
+  }
+
+  .icon-box {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 12px;
+  }
+
+  .icon-box img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .strength-card h3 {
+    font-size: 16px;
+  }
+
+  .strength-card p {
+    font-size: 12px;
+  }
+
+  .progress {
+    height: 5px;
+  }
 }

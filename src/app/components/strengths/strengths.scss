@@ -1,11 +1,17 @@
+/* ==========================
+   STRENGTHS
+========================== */
+
 .strengths {
+  width: 100%;
   background: #000;
   padding: 80px 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* ==========================
-   Section Tag
+   SECTION TAG
 ========================== */
 
 .section-tag {
@@ -14,6 +20,7 @@
   gap: 10px;
 
   color: #fff;
+
   font-size: 18px;
   font-weight: 400;
 
@@ -29,10 +36,12 @@
   background: #f7c52b;
 
   display: inline-block;
+
+  flex-shrink: 0;
 }
 
 /* ==========================
-   Section Title
+   SECTION TITLE
 ========================== */
 
 .section-title {
@@ -40,58 +49,116 @@
 
   font-size: 64px;
   line-height: 1.1;
+
   font-weight: 500;
 
   margin: 0 0 60px;
 }
 
 /* ==========================
-   Slider
+   SLIDER
 ========================== */
 
 .strength-slider {
   width: 100%;
+
   overflow: hidden;
+
+  box-sizing: border-box;
 }
+
+/* ==========================
+   TRACK
+========================== */
 
 .strength-track {
   display: flex;
+
   width: 100%;
 
-  /*
-   * 0.8 second smooth slide
-   */
   transition: transform 0.8s ease-in-out;
 
   will-change: transform;
 }
 
 /* ==========================
-   Each Page
+   PAGE
 ========================== */
 
 .strength-page {
   flex: 0 0 100%;
+
   width: 100%;
   min-width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 32px;
 
   box-sizing: border-box;
 }
 
-/* ==========================
-   Responsive
-========================== */
+/* ==================================================
+   LARGE DESKTOP
+   1200px+
+================================================== */
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .strengths {
+    padding: 90px 0;
+  }
+
+  .section-title {
+    font-size: 64px;
+  }
+
   .strength-page {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 32px;
   }
 }
+
+/* ==================================================
+   TABLET
+   769px - 1199px
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .strengths {
+    padding: 80px 32px;
+  }
+
+  .section-tag {
+    font-size: 17px;
+
+    margin-bottom: 24px;
+  }
+
+  .section-tag::before {
+    width: 50px;
+    height: 3px;
+  }
+
+  .section-title {
+    font-size: 48px;
+
+    margin-bottom: 45px;
+  }
+
+  .strength-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+   0px - 768px
+================================================== */
 
 @media (max-width: 768px) {
   .strengths {
@@ -100,6 +167,8 @@
 
   .section-tag {
     font-size: 16px;
+
+    margin-bottom: 20px;
   }
 
   .section-tag::before {
@@ -108,12 +177,48 @@
   }
 
   .section-title {
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size: 42px;
+
+    line-height: 1.12;
+
+    margin-bottom: 38px;
+  }
+
+  .strength-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+   0px - 480px
+================================================== */
+
+@media (max-width: 480px) {
+  .strengths {
+    padding: 60px 16px;
+  }
+
+  .section-tag {
+    font-size: 15px;
+  }
+
+  .section-tag::before {
+    width: 40px;
+    height: 3px;
+  }
+
+  .section-title {
+    font-size: 34px;
+
+    margin-bottom: 30px;
   }
 
   .strength-page {
     grid-template-columns: 1fr;
-    gap: 20px;
+
+    gap: 14px;
   }
 }

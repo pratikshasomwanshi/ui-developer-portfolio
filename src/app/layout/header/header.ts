@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class HeaderComponent {
+  isMenuOpen = false;
+
   menuItems = [
     {
       title: 'Home',
@@ -24,7 +27,13 @@ export class HeaderComponent {
     },
   ];
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   scrollTo(id: string): void {
+    this.isMenuOpen = false;
+
     document.getElementById(id)?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',

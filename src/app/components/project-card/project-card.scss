@@ -1,185 +1,547 @@
+/* ==========================
+   PROJECT CARD
+========================== */
+
 .project-card {
+  width: 100%;
+
   display: grid;
-  grid-template-columns: 58% 42%;
-  align-items: center;
+  grid-template-columns: 52% 48%;
+
   gap: 50px;
 
-  background: #f8e8e8;
-  border-radius: 28px;
+  align-items: center;
 
-  padding: 48px 52px;
-  margin-bottom: 40px;
+  padding: 45px;
+
+  box-sizing: border-box;
+
+  background: #111;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
 
   overflow: hidden;
 }
 
+/* ==========================
+   CONTENT
+========================== */
+
 .project-content {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+
+  min-width: 0;
 }
+
+/* ==========================
+   TITLE
+========================== */
 
 .project-title {
   display: flex;
+
   align-items: center;
-  gap: 12px;
-  margin-bottom: 26px;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
 }
 
 .project-title h3 {
-  font-family: 'Space Grotesk';
-  font-size: 42px;
-  font-weight: 700;
   margin: 0;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  line-height: 1.2;
 }
 
 .project-title img {
-  width: 34px;
-  height: 34px;
-}
-
-.project-description {
-  font-family: 'DM Sans';
-  font-size: 18px;
-  line-height: 1.8;
-  color: #222;
-  margin-bottom: 18px;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 30px 0;
-}
-
-.project-tags span {
-  padding: 10px 22px;
-  border: 1px solid #8d8d8d;
-  border-radius: 999px;
-
-  font-size: 15px;
-  color: #333;
-}
-
-.case-study-btn {
-  width: 300px;
-  height: 64px;
-
-  background: #1c0808;
-
-  border: none;
-  border-radius: 999px;
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 10px 0 26px;
-
-  cursor: pointer;
-}
-
-.btn-icon {
   width: 44px;
   height: 44px;
 
-  border-radius: 50%;
+  object-fit: contain;
 
-  background: white;
-  color: black;
+  flex-shrink: 0;
+}
 
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.project-description {
+  margin: 0 0 18px;
+
+  color: #cfcfcf;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   TAGS
+========================== */
+
+.project-tags {
   display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.project-tags span {
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
-  font-size: 22px;
-}
+  min-height: 34px;
 
-.project-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  padding: 6px 14px;
 
-.project-type {
-  font-size: 20px;
-  color: #222;
-  margin-bottom: 30px;
-}
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-.project-image img {
-  width: 100%;
-  max-width: 470px;
-  object-fit: contain;
-}
+  border-radius: 999px;
 
-.project-buttons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 28px;
-}
+  background: #191919;
 
-/* Common button style */
-.case-study-btn,
-.live-website-btn {
-  height: 65px;
-  border-radius: 40px;
+  color: #d7d7d7;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
 
-  padding: 6px 8px 6px 30px;
+  font-size: 13px;
 
-  font-size: 15px;
-  font-family: inherit;
-
-  text-decoration: none;
-  cursor: pointer;
+  white-space: nowrap;
 
   box-sizing: border-box;
 }
 
-/* Case study */
-.case-study-btn {
-  width: 375px;
+/* ==========================
+   BUTTONS
+========================== */
 
-  border: none;
-  background: #180505;
-  color: #fff;
-}
-
-/* Live website */
-.live-website-btn {
-  width: 300px;
-
-  border: 1px solid #888;
-  background: transparent;
-  color: #111;
-}
-
-/* Circle */
-.btn-icon {
-  width: 52px;
-  height: 52px;
-
-  flex-shrink: 0;
-
+.project-buttons {
   display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.case-study-btn,
+.live-website-btn {
+  min-height: 50px;
+
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  gap: 14px;
 
-  background: #fff;
-  color: #111;
+  padding: 0 20px;
 
-  font-size: 24px;
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.btn-text {
-  white-space: nowrap;
+/* CASE STUDY */
+
+.case-study-btn {
+  border: 1px solid var(--primary);
+
+  background: var(--primary);
+
+  color: #000;
+}
+
+/* LIVE WEBSITE */
+
+.live-website-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: transparent;
+
+  color: #fff;
+}
+
+.case-study-btn:hover,
+.live-website-btn:hover {
+  transform: translateY(-2px);
+}
+
+.live-website-btn:hover {
+  border-color: #fff;
+
+  background: #1b1b1b;
+}
+
+/* ICON */
+
+.btn-icon {
+  font-size: 20px;
+
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.project-image {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.project-type {
+  margin: 0 0 14px;
+
+  color: #b8b8b8;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 14px;
+
+  text-align: right;
+}
+
+.project-image img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+/* ==================================================
+   LARGE DESKTOP
+   1200px+
+================================================== */
+
+@media (min-width: 1200px) {
+  .project-card {
+    grid-template-columns: 52% 48%;
+
+    gap: 55px;
+
+    padding: 48px;
+  }
+
+  .project-title h3 {
+    font-size: 32px;
+  }
+
+  .project-description {
+    font-size: 17px;
+  }
+
+  .project-image img {
+    max-height: 500px;
+  }
+}
+
+/* ==================================================
+   TABLET
+   769px - 1199px
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .project-card {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+  }
+
+  .project-title {
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .project-title h3 {
+    font-size: 23px;
+  }
+
+  .project-title img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .project-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .project-tags {
+    margin-top: 20px;
+
+    gap: 8px;
+  }
+
+  .project-tags span {
+    font-size: 12px;
+
+    min-height: 32px;
+
+    padding: 5px 11px;
+  }
+
+  .project-buttons {
+    margin-top: 22px;
+
+    gap: 10px;
+  }
+
+  .case-study-btn,
+  .live-website-btn {
+    min-height: 46px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
+
+  .project-type {
+    font-size: 13px;
+
+    margin-bottom: 10px;
+  }
+
+  .project-image img {
+    border-radius: 10px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+   0px - 768px
+================================================== */
+
+@media (max-width: 768px) {
+  .project-card {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    padding: 24px 20px;
+
+    border-radius: 14px;
+  }
+
+  /* IMAGE FIRST */
+
+  .project-image {
+    order: -1;
+
+    width: 100%;
+  }
+
+  .project-type {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    text-align: left;
+  }
+
+  .project-image img {
+    width: 100%;
+
+    border-radius: 10px;
+  }
+
+  /* CONTENT */
+
+  .project-content {
+    width: 100%;
+  }
+
+  /* TITLE */
+
+  .project-title {
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+  }
+
+  .project-title h3 {
+    font-size: 22px;
+
+    line-height: 1.3;
+  }
+
+  .project-title img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* DESCRIPTION */
+
+  .project-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 14px;
+  }
+
+  /* TAGS */
+
+  .project-tags {
+    margin-top: 18px;
+
+    gap: 8px;
+  }
+
+  .project-tags span {
+    min-height: 31px;
+
+    padding: 5px 10px;
+
+    font-size: 12px;
+  }
+
+  /* BUTTONS */
+
+  .project-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-top: 24px;
+  }
+
+  .case-study-btn,
+  .live-website-btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 16px;
+
+    font-size: 14px;
+  }
+
+  .btn-text {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+   0px - 480px
+================================================== */
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 20px 16px;
+
+    gap: 25px;
+  }
+
+  .project-title {
+    gap: 8px;
+  }
+
+  .project-title h3 {
+    font-size: 19px;
+  }
+
+  .project-title img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .project-description {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .project-tags {
+    gap: 7px;
+  }
+
+  .project-tags span {
+    font-size: 11px;
+
+    padding: 5px 9px;
+
+    min-height: 29px;
+  }
+
+  .case-study-btn,
+  .live-website-btn {
+    min-height: 48px;
+
+    font-size: 13px;
+  }
+
+  .btn-icon {
+    font-size: 18px;
+  }
 }

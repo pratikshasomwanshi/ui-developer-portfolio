@@ -1,514 +1,27 @@
-// // .experience {
-// //   background: #000;
-// //   padding: 100px 0 40px;
-// // }
-
-// // .experience-wrapper {
-// //   display: grid;
-// //   grid-template-columns: 60% 40%;
-// //   gap: 70px;
-
-// //   align-items: start;
-// // }
-
-// // .section-tag {
-// //   display: flex;
-// //   align-items: center;
-// //   gap: 10px;
-
-// //   color: #fff;
-// //   font-size: 18px;
-// //   font-weight: 400;
-// //   margin-bottom: 32px;
-// // }
-
-// // .section-tag::before {
-// //   content: '';
-// //   width: 55px;
-// //   height: 4px;
-// //   background: #f7c52b;
-// //   display: inline-block;
-// // }
-
-// // .design-title {
-// //   margin-top: 60px;
-// // }
-
-// // /* ==========================
-// //    Timeline
-// // ========================== */
-
-// // .timeline {
-// //   position: relative;
-// //   margin-top: 20px;
-// //   padding-left: 34px;
-// // }
-
-// // .timeline::before {
-// //   content: '';
-// //   position: absolute;
-// //   left: 10px;
-// //   top: 0;
-// //   bottom: 0;
-// //   width: 2px;
-// //   background: rgba(255, 255, 255, 0.25);
-// // }
-
-// // .timeline-item {
-// //   position: relative;
-// //   margin-bottom: 60px;
-// // }
-
-// // .timeline-item:last-child {
-// //   margin-bottom: 0;
-// // }
-// // .timeline-dot {
-// //   position: absolute;
-// //   left: -34px;
-// //   top: 8px;
-
-// //   width: 16px;
-// //   height: 16px;
-
-// //   border-radius: 50%;
-// //   background: #f7c52b;
-
-// //   border: 4px solid #000;
-// //   box-shadow: 0 0 0 2px #f7c52b;
-// // }
-
-// // .timeline-header {
-// //   display: flex;
-// //   justify-content: space-between;
-// //   gap: 20px;
-// // }
-
-// // .timeline-header h3 {
-// //   margin: 0;
-
-// //   color: #fff;
-
-// //   font-size: 24px;
-// //   font-weight: 600;
-// // }
-
-// // .timeline-header span {
-// //   display: block;
-
-// //   margin-top: 8px;
-
-// //   color: #bfbfbf;
-
-// //   font-size: 16px;
-// // }
-
-// // .timeline-date {
-// //   color: #d0d0d0;
-
-// //   white-space: nowrap;
-
-// //   font-size: 15px;
-// // }
-
-// // .timeline-description {
-// //   margin-top: 18px;
-
-// //   max-width: 720px;
-
-// //   color: #cfcfcf;
-
-// //   font-size: 17px;
-// //   line-height: 1.8;
-// // }
-
-// // /* ==========================
-// //    Education
-// // ========================== */
-
-// // .education-list {
-// //   margin-top: 20px;
-// // }
-
-// // .education-item {
-// //   margin-bottom: 36px;
-// // }
-
-// // .education-header {
-// //   display: flex;
-// //   justify-content: space-between;
-// //   gap: 20px;
-// // }
-
-// // .education-header h3 {
-// //   margin: 0;
-// //   color: #ffffff;
-// //   font-size: 22px;
-// //   font-weight: 600;
-// // }
-
-// // .education-header span {
-// //   display: block;
-// //   margin-top: 6px;
-// //   color: #bfbfbf;
-// //   font-size: 16px;
-// // }
-
-// // .education-header p {
-// //   color: #d0d0d0;
-// //   white-space: nowrap;
-// //   font-size: 15px;
-// // }
-
-// // .education-item small {
-// //   display: inline-block;
-// //   margin-top: 8px;
-// //   color: #bfbfbf;
-// //   font-size: 15px;
-// // }
-
-// // /* ==========================
-// //    Design Tools
-// // ========================== */
-
-// // .design-title {
-// //   display: block;
-// //   margin-top: 60px;
-// //   margin-bottom: 28px;
-// // }
-
-// // .tools-list {
-// //   display: flex;
-// //   flex-wrap: wrap;
-// //   gap: 18px;
-// // }
-
-// // .tools-list img {
-// //   width: 42px;
-// //   height: 42px;
-// //   object-fit: contain;
-// //   transition: transform 0.3s ease;
-// // }
-
-// // .tools-list img:hover {
-// //   transform: scale(1.12);
-// // }
-
-// .experience {
-//   background: #000;
-//   padding: 100px 0 40px;
-// }
-
-// .experience-wrapper {
-//   display: grid;
-//   grid-template-columns: 60% 40%;
-//   gap: 70px;
-//   align-items: start;
-// }
-
-// /* ==========================
-//    Section Tag
-// ========================== */
-
-// .section-tag {
-//   display: flex;
-//   align-items: center;
-//   gap: 10px;
-
-//   color: #fff;
-//   font-size: 18px;
-//   font-weight: 400;
-//   margin-bottom: 32px;
-// }
-
-// .section-tag::before {
-//   content: '';
-
-//   width: 55px;
-//   height: 4px;
-
-//   background: #f7c52b;
-
-//   display: inline-block;
-// }
-
-// /* ==========================
-//    Timeline
-// ========================== */
-
-// .timeline {
-//   position: relative;
-
-//   margin-top: 20px;
-//   padding-left: 55px;
-// }
-
-// /* Single vertical line */
-
-// .timeline::before {
-//   content: '';
-
-//   position: absolute;
-
-//   left: 10px;
-//   top: 16px;
-//   bottom: 16px;
-
-//   width: 3px;
-
-//   background: #fff;
-
-//   z-index: 0;
-// }
-
-// /* Timeline item */
-
-// .timeline-item {
-//   position: relative;
-
-//   margin-bottom: 60px;
-// }
-
-// .timeline-item:last-child {
-//   margin-bottom: 0;
-// }
-
-// /* Yellow outer circle + white center */
-
-// .timeline-dot {
-//   position: absolute;
-
-//   left: -57px;
-//   top: 0;
-
-//   width: 32px;
-//   height: 32px;
-
-//   border-radius: 50%;
-
-//   background: #fff;
-
-//   border: 7px solid #f7c52b;
-
-//   box-sizing: border-box;
-
-//   z-index: 2;
-// }
-
-// /* ==========================
-//    Timeline Header
-// ========================== */
-
-// .timeline-header {
-//   display: flex;
-
-//   justify-content: space-between;
-
-//   gap: 20px;
-// }
-
-// .timeline-header h3 {
-//   margin: 0;
-
-//   color: #fff;
-
-//   font-size: 24px;
-//   font-weight: 600;
-// }
-
-// .timeline-header span {
-//   display: block;
-
-//   margin-top: 8px;
-
-//   color: #bfbfbf;
-
-//   font-size: 16px;
-// }
-
-// .timeline-date {
-//   color: #d0d0d0;
-
-//   white-space: nowrap;
-
-//   font-size: 15px;
-// }
-
-// /* ==========================
-//    Timeline Description
-// ========================== */
-
-// .timeline-description {
-//   margin-top: 18px;
-
-//   max-width: 720px;
-
-//   color: #cfcfcf;
-
-//   font-size: 17px;
-
-//   line-height: 1.8;
-// }
-
-// /* ==========================
-//    Education
-// ========================== */
-
-// .education-list {
-//   margin-top: 20px;
-// }
-
-// .education-item {
-//   margin-bottom: 36px;
-// }
-
-// .education-header {
-//   display: flex;
-
-//   justify-content: space-between;
-
-//   gap: 20px;
-// }
-
-// .education-header h3 {
-//   margin: 0;
-
-//   color: #ffffff;
-
-//   font-size: 22px;
-//   font-weight: 600;
-// }
-
-// .education-header span {
-//   display: block;
-
-//   margin-top: 6px;
-
-//   color: #bfbfbf;
-
-//   font-size: 16px;
-// }
-
-// .education-header p {
-//   color: #d0d0d0;
-
-//   white-space: nowrap;
-
-//   font-size: 15px;
-// }
-
-// .education-item small {
-//   display: inline-block;
-
-//   margin-top: 8px;
-
-//   color: #bfbfbf;
-
-//   font-size: 15px;
-// }
-
-// /* ==========================
-//    Design Tools
-// ========================== */
-
-// .design-title {
-//   display: block;
-
-//   margin-top: 60px;
-//   margin-bottom: 28px;
-// }
-
-// .tools-list {
-//   display: flex;
-
-//   flex-wrap: wrap;
-
-//   gap: 18px;
-// }
-
-// .tools-list img {
-//   width: 42px;
-//   height: 42px;
-
-//   object-fit: contain;
-
-//   transition: transform 0.3s ease;
-// }
-
-// .tools-list img:hover {
-//   transform: scale(1.12);
-// }
-
-// /* ==========================
-//    Responsive
-// ========================== */
-
-// @media (max-width: 992px) {
-//   .experience-wrapper {
-//     grid-template-columns: 1fr;
-//     gap: 50px;
-//   }
-// }
-
-// /* ==========================
-//    Mobile
-// ========================== */
-
-// @media (max-width: 768px) {
-//   .experience {
-//     padding: 70px 20px 40px;
-//   }
-
-//   .timeline {
-//     padding-left: 45px;
-//   }
-
-//   .timeline::before {
-//     left: 8px;
-//     top: 14px;
-//     bottom: 14px;
-//   }
-
-//   .timeline-dot {
-//     left: -51px;
-
-//     width: 28px;
-//     height: 28px;
-
-//     border-width: 6px;
-//   }
-
-//   .timeline-header {
-//     flex-direction: column;
-
-//     gap: 8px;
-//   }
-
-//   .timeline-date {
-//     white-space: normal;
-//   }
-
-//   .timeline-header h3 {
-//     font-size: 21px;
-//   }
-
-//   .timeline-description {
-//     font-size: 16px;
-//   }
-// }
-
 /* ==========================
    EXPERIENCE SECTION
 ========================== */
 
 .experience {
+  width: 100%;
   background: #000;
-  padding: 100px 0 40px;
+
+  padding: 100px 0 70px;
+
+  box-sizing: border-box;
 }
+
+/* ==========================
+   MAIN WRAPPER
+========================== */
 
 .experience-wrapper {
   display: grid;
+
   grid-template-columns: 60% 40%;
+
   gap: 70px;
+
   align-items: start;
 }
 
@@ -519,24 +32,28 @@
 .section-tag {
   display: flex;
   align-items: center;
+
   gap: 10px;
 
+  margin-bottom: 32px;
+
   color: #fff;
+
   font-size: 18px;
   font-weight: 400;
-
-  margin-bottom: 32px;
 }
 
 .section-tag::before {
   content: '';
+
+  display: inline-block;
 
   width: 55px;
   height: 4px;
 
   background: #f7c52b;
 
-  display: inline-block;
+  flex-shrink: 0;
 }
 
 /* ==========================
@@ -547,6 +64,7 @@
   position: relative;
 
   margin-top: 20px;
+
   padding-left: 55px;
 }
 
@@ -609,14 +127,8 @@
 }
 
 /* ==========================
-   HIDE LINE AFTER LAST DOT
+   LAST DOT - STOP LINE
 ========================== */
-
-/*
-  Last dot ke neeche jo line
-  continue hoti hai usko black
-  overlay se hide kar rahe hain.
-*/
 
 .timeline-item:last-child::after {
   content: '';
@@ -640,9 +152,12 @@
 
 .timeline-header {
   display: flex;
+
+  align-items: flex-start;
+
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 25px;
 }
 
 .timeline-header h3 {
@@ -652,6 +167,8 @@
 
   font-size: 24px;
   font-weight: 600;
+
+  line-height: 1.3;
 }
 
 .timeline-header span {
@@ -665,25 +182,27 @@
 }
 
 /* ==========================
-   TIMELINE DATE
+   DATE
 ========================== */
 
 .timeline-date {
+  margin: 0;
+
   color: #d0d0d0;
 
-  white-space: nowrap;
-
   font-size: 15px;
+
+  white-space: nowrap;
 }
 
 /* ==========================
-   TIMELINE DESCRIPTION
+   DESCRIPTION
 ========================== */
 
 .timeline-description {
-  margin-top: 18px;
-
   max-width: 720px;
+
+  margin: 18px 0 0;
 
   color: #cfcfcf;
 
@@ -704,8 +223,15 @@
   margin-bottom: 36px;
 }
 
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
 .education-header {
   display: flex;
+
+  align-items: flex-start;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -718,6 +244,8 @@
 
   font-size: 22px;
   font-weight: 600;
+
+  line-height: 1.3;
 }
 
 .education-header span {
@@ -731,11 +259,13 @@
 }
 
 .education-header p {
+  margin: 0;
+
   color: #d0d0d0;
 
-  white-space: nowrap;
-
   font-size: 15px;
+
+  white-space: nowrap;
 }
 
 .education-item small {
@@ -752,15 +282,15 @@
    DESIGN TOOLS
 ========================== */
 
-.design-title {
-  display: block;
-
+.experience-right > .section-tag:last-of-type {
   margin-top: 60px;
   margin-bottom: 28px;
 }
 
 .tools-list {
   display: flex;
+
+  align-items: center;
 
   flex-wrap: wrap;
 
@@ -773,6 +303,8 @@
 
   object-fit: contain;
 
+  flex-shrink: 0;
+
   transition: transform 0.3s ease;
 }
 
@@ -780,48 +312,177 @@
   transform: scale(1.12);
 }
 
-/* ==========================
-   TABLET
-========================== */
+/* ==================================================
+   LARGE DESKTOP
+   1200px+
+================================================== */
 
-@media (max-width: 992px) {
+@media (min-width: 1200px) {
   .experience-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 60% 40%;
 
-    gap: 50px;
+    gap: 70px;
+  }
+
+  .timeline-header h3 {
+    font-size: 24px;
+  }
+
+  .timeline-description {
+    font-size: 17px;
   }
 }
 
-/* ==========================
+/* ==================================================
+   TABLET
+   769px - 1199px
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .experience {
+    padding: 80px 32px 60px;
+  }
+
+  .experience-wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .section-tag {
+    font-size: 17px;
+
+    margin-bottom: 28px;
+  }
+
+  .section-tag::before {
+    width: 50px;
+    height: 3px;
+  }
+
+  .timeline {
+    margin-top: 15px;
+
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 9px;
+  }
+
+  .timeline-dot {
+    left: -53px;
+
+    width: 30px;
+    height: 30px;
+
+    border-width: 6px;
+  }
+
+  .timeline-item:last-child::after {
+    left: -44px;
+    top: 30px;
+  }
+
+  .timeline-header {
+    gap: 20px;
+  }
+
+  .timeline-header h3 {
+    font-size: 22px;
+  }
+
+  .timeline-header span {
+    font-size: 15px;
+  }
+
+  .timeline-date {
+    font-size: 14px;
+  }
+
+  .timeline-description {
+    font-size: 16px;
+
+    line-height: 1.75;
+  }
+
+  .education-header h3 {
+    font-size: 20px;
+  }
+
+  .education-header span {
+    font-size: 15px;
+  }
+
+  .education-header p {
+    font-size: 14px;
+  }
+
+  .tools-list {
+    gap: 16px;
+  }
+
+  .tools-list img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ==================================================
    MOBILE
-========================== */
+   0px - 768px
+================================================== */
 
 @media (max-width: 768px) {
   .experience {
-    padding: 70px 20px 40px;
+    padding: 70px 20px 50px;
   }
 
-  /* Timeline */
+  .experience-wrapper {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 55px;
+  }
+
+  /* SECTION TAG */
+
+  .section-tag {
+    font-size: 16px;
+
+    margin-bottom: 24px;
+  }
+
+  .section-tag::before {
+    width: 44px;
+    height: 3px;
+  }
+
+  /* TIMELINE */
 
   .timeline {
-    padding-left: 45px;
-  }
+    margin-top: 10px;
 
-  /* Vertical line */
+    padding-left: 42px;
+  }
 
   .timeline::before {
     left: 8px;
 
     top: 14px;
-    bottom: 0;
 
     width: 3px;
   }
 
-  /* Timeline dot */
+  .timeline-item {
+    margin-bottom: 45px;
+  }
+
+  /* DOT */
 
   .timeline-dot {
-    left: -51px;
+    left: -48px;
 
     width: 28px;
     height: 28px;
@@ -829,62 +490,146 @@
     border-width: 6px;
   }
 
-  /* Hide line after last dot */
+  /* STOP LINE */
 
   .timeline-item:last-child::after {
     left: -37px;
 
     top: 28px;
-    bottom: 0;
 
     width: 3px;
-
-    background: #000;
-
-    z-index: 1;
   }
 
-  /* Timeline header */
+  /* HEADER */
 
   .timeline-header {
+    display: flex;
+
     flex-direction: column;
 
     gap: 8px;
   }
 
+  .timeline-header h3 {
+    font-size: 20px;
+
+    line-height: 1.35;
+  }
+
+  .timeline-header span {
+    margin-top: 6px;
+
+    font-size: 15px;
+  }
+
   .timeline-date {
+    font-size: 14px;
+
     white-space: normal;
   }
 
-  .timeline-header h3 {
-    font-size: 21px;
-  }
+  /* DESCRIPTION */
 
   .timeline-description {
-    font-size: 16px;
+    margin-top: 14px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /* EDUCATION */
+
+  .education-list {
+    margin-top: 15px;
+  }
+
+  .education-item {
+    margin-bottom: 28px;
+  }
+
+  .education-header {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .education-header h3 {
+    font-size: 19px;
+
+    line-height: 1.35;
+  }
+
+  .education-header span {
+    font-size: 15px;
+  }
+
+  .education-header p {
+    font-size: 14px;
+
+    white-space: normal;
+  }
+
+  .education-item small {
+    font-size: 14px;
+  }
+
+  /* DESIGN TOOLS */
+
+  .experience-right > .section-tag:last-of-type {
+    margin-top: 50px;
+    margin-bottom: 22px;
+  }
+
+  .tools-list {
+    gap: 14px;
+  }
+
+  .tools-list img {
+    width: 38px;
+    height: 38px;
   }
 }
 
-/* ==========================
+/* ==================================================
    SMALL MOBILE
-========================== */
+   0px - 480px
+================================================== */
 
 @media (max-width: 480px) {
   .experience {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 60px 16px 45px;
+  }
+
+  .experience-wrapper {
+    gap: 45px;
+  }
+
+  .section-tag {
+    font-size: 15px;
+  }
+
+  .section-tag::before {
+    width: 40px;
+    height: 3px;
   }
 
   .timeline {
-    padding-left: 40px;
+    padding-left: 38px;
   }
 
   .timeline::before {
     left: 7px;
   }
 
+  .timeline-item {
+    margin-bottom: 38px;
+  }
+
   .timeline-dot {
-    left: -47px;
+    left: -44px;
 
     width: 26px;
     height: 26px;
@@ -894,18 +639,49 @@
 
   .timeline-item:last-child::after {
     left: -35px;
-
     top: 26px;
-
-    width: 3px;
   }
 
   .timeline-header h3 {
-    font-size: 19px;
+    font-size: 18px;
+  }
+
+  .timeline-header span {
+    font-size: 14px;
+  }
+
+  .timeline-date {
+    font-size: 13px;
   }
 
   .timeline-description {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .education-header h3 {
+    font-size: 18px;
+  }
+
+  .education-header span {
+    font-size: 14px;
+  }
+
+  .education-header p {
+    font-size: 13px;
+  }
+
+  .education-item small {
+    font-size: 13px;
+  }
+
+  .tools-list {
+    gap: 12px;
+  }
+
+  .tools-list img {
+    width: 34px;
+    height: 34px;
   }
 }

@@ -1,65 +1,135 @@
+/* ==========================
+   ABOUT SECTION
+========================== */
+
 .about {
+  width: 100%;
   background: #000;
-  padding: 80px 0;
+
+  padding: 100px 0;
+
+  box-sizing: border-box;
 }
+
+/* ==========================
+   ABOUT WRAPPER
+========================== */
 
 .about-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 90px;
+
+  grid-template-columns: 48% 52%;
+
   align-items: center;
+
+  gap: 70px;
 }
+
+/* ==========================
+   ABOUT IMAGE
+========================== */
 
 .about-image {
   width: 100%;
-  max-width: 520px;
-  overflow: hidden;
-  border-radius: 28px;
-  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
   display: block;
-  object-fit: contain;
+
+  width: 100%;
+  max-width: 540px;
+
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius: 24px;
 }
+
+/* ==========================
+   ABOUT CONTENT
+========================== */
+
+.about-content {
+  width: 100%;
+}
+
+/* ==========================
+   SECTION TAG
+========================== */
 
 .section-tag {
   display: flex;
   align-items: center;
+
   gap: 10px;
 
+  margin-bottom: 28px;
+
   color: #fff;
+
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 32px;
 }
 
 .section-tag::before {
   content: '';
+
   width: 55px;
   height: 4px;
-  background: #f7c52b;
+
   display: inline-block;
+
+  background: #f7c52b;
+
+  flex-shrink: 0;
 }
+
+/* ==========================
+   TITLE
+========================== */
 
 .about-title {
-  margin: 16px 0 32px;
+  margin: 0 0 28px;
+
+  color: #fff;
+
+  font-size: 58px;
+  line-height: 1.12;
+
+  font-weight: 500;
 
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 52px;
-  line-height: 1.2;
-  color: #ffffff;
 }
 
-.about-description {
-  margin-bottom: 24px;
+/* ==========================
+   DESCRIPTION
+========================== */
 
-  color: #cfcfcf;
+.about-description {
+  max-width: 720px;
+
+  margin: 0 0 18px;
+
+  color: #c9c9c9;
+
+  font-family: 'DM Sans', sans-serif;
+
   font-size: 18px;
   line-height: 1.8;
 }
+
+.about-description:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* ==========================
+   DOWNLOAD CV
+========================== */
 
 .download-btn {
   margin-top: 20px;
@@ -67,7 +137,12 @@
   width: 260px;
   height: 58px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #f7c52b;
+
   color: #000;
 
   border: none;
@@ -76,12 +151,224 @@
   font-size: 18px;
   font-weight: 600;
 
+  font-family: inherit;
+
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   text-decoration: none;
+
   box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+
+  background: #ffd33d;
+}
+
+/* ==================================================
+   LARGE DESKTOP
+   1200px+
+================================================== */
+
+@media (min-width: 1200px) {
+  .about-wrapper {
+    grid-template-columns: 48% 52%;
+
+    gap: 80px;
+  }
+
+  .about-title {
+    font-size: 62px;
+  }
+
+  .about-description {
+    font-size: 19px;
+  }
+}
+
+/* ==================================================
+   TABLET
+   769px - 1199px
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .about {
+    padding: 80px 32px;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+
+  .about-image img {
+    max-width: 440px;
+
+    border-radius: 20px;
+  }
+
+  .section-tag {
+    font-size: 17px;
+
+    margin-bottom: 22px;
+  }
+
+  .section-tag::before {
+    width: 48px;
+    height: 3px;
+  }
+
+  .about-title {
+    font-size: 44px;
+
+    margin-bottom: 22px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+  }
+
+  .download-btn {
+    width: 230px;
+    height: 54px;
+
+    font-size: 17px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+   0px - 768px
+================================================== */
+
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-wrapper {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 45px;
+
+    align-items: stretch;
+  }
+
+  /* IMAGE FIRST */
+
+  .about-image {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .about-image img {
+    width: 100%;
+
+    max-width: 520px;
+
+    border-radius: 18px;
+  }
+
+  /* CONTENT */
+
+  .about-content {
+    width: 100%;
+  }
+
+  .section-tag {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  .section-tag::before {
+    width: 45px;
+    height: 3px;
+  }
+
+  .about-title {
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+  }
+
+  .about-description {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+  }
+
+  .download-btn {
+    width: 260px;
+    height: 56px;
+
+    margin-top: 12px;
+
+    font-size: 17px;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+   0px - 480px
+================================================== */
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 16px;
+  }
+
+  .about-wrapper {
+    gap: 35px;
+  }
+
+  .about-image img {
+    border-radius: 16px;
+  }
+
+  .section-tag {
+    font-size: 15px;
+  }
+
+  .section-tag::before {
+    width: 40px;
+    height: 3px;
+  }
+
+  .about-title {
+    font-size: 34px;
+
+    line-height: 1.12;
+  }
+
+  .about-description {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  .download-btn {
+    width: 100%;
+    max-width: 260px;
+
+    height: 54px;
+
+    font-size: 16px;
+  }
 }
