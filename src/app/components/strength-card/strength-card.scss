@@ -37,6 +37,28 @@
    ICON
 ========================== */
 
+// .icon-box {
+//   width: 56px;
+//   height: 56px;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   margin-bottom: 20px;
+
+//   border-radius: 10px;
+
+//   background: #1b1b1b;
+// }
+
+// .icon-box img {
+//   width: 34px;
+//   height: 34px;
+
+//   object-fit: contain;
+// }
+
 .icon-box {
   width: 56px;
   height: 56px;
@@ -47,16 +69,25 @@
 
   margin-bottom: 20px;
 
+  background: #1b1b1b;
   border-radius: 10px;
 
-  background: #1b1b1b;
+  overflow: hidden;
 }
 
 .icon-box img {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
 
   object-fit: contain;
+
+  background: #fff;
+
+  border-radius: 6px;
+
+  padding: 4px;
+
+  box-sizing: border-box;
 }
 
 /* ==========================
@@ -262,5 +293,29 @@
 
   .progress {
     height: 5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .icon-box {
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon-box img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-box {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-box img {
+    width: 32px;
+    height: 32px;
   }
 }

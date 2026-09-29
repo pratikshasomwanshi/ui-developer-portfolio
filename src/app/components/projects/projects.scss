@@ -1,12 +1,49 @@
-/* ==========================
-   PROJECTS SECTION
-========================== */
+// .projects {
+//   background: #000;
+//   padding: 80px 0;
+// }
+
+// .projects-header {
+//   margin-bottom: 70px;
+// }
+
+// .section-tag {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+
+//   color: #fff;
+//   font-size: 18px;
+//   font-weight: 400;
+//   margin-bottom: 32px;
+// }
+
+// .section-tag::before {
+//   content: '';
+//   width: 55px;
+//   height: 4px;
+//   background: #f7c52b;
+//   display: inline-block;
+// }
+// .projects-title {
+//   margin-top: 16px;
+//   font-size: 64px;
+//   color: white;
+//   font-family: 'Space Grotesk';
+// }
+
+// .projects-description {
+//   color: #bdbdbd;
+//   font-size: 22px;
+//   margin-top: 18px;
+// }
 
 .projects {
   width: 100%;
+
   background: #000;
 
-  padding: 100px 0 80px;
+  padding: 80px 0;
 
   box-sizing: border-box;
 
@@ -14,11 +51,11 @@
 }
 
 /* ==========================
-   HEADER
+   PROJECT HEADER
 ========================== */
 
 .projects-header {
-  margin-bottom: 65px;
+  margin-bottom: 70px;
 }
 
 /* ==========================
@@ -27,16 +64,17 @@
 
 .section-tag {
   display: flex;
+
   align-items: center;
 
   gap: 10px;
-
-  margin-bottom: 28px;
 
   color: #fff;
 
   font-size: 18px;
   font-weight: 400;
+
+  margin-bottom: 32px;
 }
 
 .section-tag::before {
@@ -45,30 +83,29 @@
   width: 55px;
   height: 4px;
 
-  display: inline-block;
-
   background: #f7c52b;
+
+  display: inline-block;
 
   flex-shrink: 0;
 }
 
 /* ==========================
-   TITLE
+   PROJECT TITLE
 ========================== */
 
 .projects-title {
-  margin: 0 0 18px;
+  margin: 16px 0 0;
+
+  font-size: 64px;
+
+  line-height: 1.1;
 
   color: #fff;
 
   font-family: 'Space Grotesk', sans-serif;
 
-  font-size: 64px;
   font-weight: 500;
-
-  line-height: 1.1;
-
-  letter-spacing: -1px;
 }
 
 /* ==========================
@@ -78,56 +115,13 @@
 .projects-description {
   max-width: 700px;
 
-  margin: 0;
-
   color: #bdbdbd;
 
-  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
 
-  font-size: 19px;
+  line-height: 1.6;
 
-  line-height: 1.7;
-}
-
-/* ==========================
-   PROJECT CARD SPACING
-========================== */
-
-.projects app-project-card {
-  display: block;
-
-  margin-bottom: 70px;
-}
-
-.projects app-project-card:last-child {
-  margin-bottom: 0;
-}
-
-/* ==================================================
-   LARGE DESKTOP
-   1200px+
-================================================== */
-
-@media (min-width: 1200px) {
-  .projects {
-    padding: 100px 0 90px;
-  }
-
-  .projects-header {
-    margin-bottom: 70px;
-  }
-
-  .projects-title {
-    font-size: 64px;
-  }
-
-  .projects-description {
-    font-size: 19px;
-  }
-
-  .projects app-project-card {
-    margin-bottom: 80px;
-  }
+  margin: 18px 0 0;
 }
 
 /* ==================================================
@@ -137,40 +131,36 @@
 
 @media (min-width: 769px) and (max-width: 1199px) {
   .projects {
-    padding: 80px 32px 65px;
+    padding: 70px 32px;
   }
 
   .projects-header {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
   .section-tag {
     font-size: 17px;
 
-    margin-bottom: 22px;
+    margin-bottom: 25px;
   }
 
   .section-tag::before {
-    width: 48px;
+    width: 50px;
     height: 3px;
   }
 
   .projects-title {
-    font-size: 48px;
+    font-size: 50px;
 
-    margin-bottom: 16px;
+    line-height: 1.1;
   }
 
   .projects-description {
     max-width: 650px;
 
-    font-size: 17px;
+    font-size: 18px;
 
     line-height: 1.7;
-  }
-
-  .projects app-project-card {
-    margin-bottom: 55px;
   }
 }
 
@@ -195,30 +185,30 @@
   }
 
   .section-tag::before {
-    width: 44px;
+    width: 45px;
     height: 3px;
   }
 
   .projects-title {
+    margin-top: 12px;
+
     font-size: 42px;
 
-    line-height: 1.12;
+    line-height: 1.1;
 
     letter-spacing: -0.5px;
-
-    margin-bottom: 14px;
   }
 
   .projects-description {
+    width: 100%;
+
     max-width: 100%;
 
     font-size: 16px;
 
     line-height: 1.7;
-  }
 
-  .projects app-project-card {
-    margin-bottom: 40px;
+    margin-top: 14px;
   }
 }
 
@@ -249,15 +239,13 @@
     font-size: 34px;
 
     line-height: 1.12;
+
+    letter-spacing: 0;
   }
 
   .projects-description {
     font-size: 15px;
 
     line-height: 1.65;
-  }
-
-  .projects app-project-card {
-    margin-bottom: 32px;
   }
 }
